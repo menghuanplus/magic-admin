@@ -2,7 +2,7 @@
 
 # 增加 hosts
 ```
-sudo echo "127.0.0.1 fe.pumpkin.com" >> /etc/hosts
+sudo echo "127.0.0.1 fe.your.com" >> /etc/hosts
 ```
 
 # nginx config
@@ -10,7 +10,7 @@ sudo echo "127.0.0.1 fe.pumpkin.com" >> /etc/hosts
 # 8080 替换为你的端口
 server{
     listen 80;
-    server_name fe.pumpkin.com;
+    server_name fe.your.com;
 
     location / {
         proxy_pass                  http://127.0.0.1:8080;

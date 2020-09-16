@@ -3,7 +3,7 @@
      <div class="logo">
       <img src="../assets/logo.svg" alt="oj admin"/>
     </div>
-     <el-menu-item index="/dashboard"><i class="el-icon-message"></i>欢迎页</el-menu-item>
+     <el-menu-item index="/dashboard"><i class="el-icon-house"></i>欢迎页</el-menu-item>
       <el-submenu index="1">
         <template slot="title"><i class="el-icon-message"></i>导航一</template>
           <el-menu-item index="/test">选项1</el-menu-item>

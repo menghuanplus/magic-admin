@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 // 引入 view 组件
-import {Test, Login, Home, Dashboard} from './views'
+import {Test, Login, Home, Dashboard, NotFound} from './views'
 Vue.use(VueRouter)
 
 export default new VueRouter({
@@ -12,12 +12,17 @@ export default new VueRouter({
     {
       path: '/login',
       name: 'login',
-      component: Login
+      component: Login,
     },
     {
       path: '/',
       component: Home,
       children: [
+        {
+          path: '',
+          name: 'dashboard',
+          component: Dashboard
+        },
         {
           path: '/dashboard',
           name: 'dashboard',
@@ -27,11 +32,16 @@ export default new VueRouter({
           path: '/test',
           name: 'test',
           component: Test
+        },
+        {
+          path: '/404',
+          name: '404',
+          component: NotFound
         }
       ]
     },
     {
-      path: '*', redirect: '/dashboard'
+      path: '*', redirect: '/404'
     }
   ]
 })

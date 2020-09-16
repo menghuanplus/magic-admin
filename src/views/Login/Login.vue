@@ -16,9 +16,6 @@
 </template>
 
 <script>
-//   import cookie from '@/utils/cookie'
-//   import api from '../../api'
-
   export default {
     data () {
       return {
@@ -40,20 +37,6 @@
     },
     methods: {
       handleLogin () {
-        // this.$refs.ruleForm2.validate((valid) => {
-        //   if (valid) {
-        //     this.logining = true
-        //     api.login(this.ruleForm2.account, this.ruleForm2.password).then(res => {
-        //       cookie.setCookie('Authorization', res.data.data.assess_token, 7, process.env.DOMAIN)
-        //       this.logining = false
-        //       this.$router.push({name: 'dashboard'})
-        //     }, () => {
-        //       this.logining = false
-        //     })
-        //   } else {
-        //     this.$error('Please check the error fields')
-        //   }
-        // })
       }
     }
   }

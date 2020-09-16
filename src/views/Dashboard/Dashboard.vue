@@ -1,21 +1,26 @@
 <template>
   <div >
-    <el-card class="box-card" style="text-align:center; width:100%;height: 600px; line-height:600px; font-size:100px; color:#409EFF
-;">
-      <div>
-        Welcome {{ username }}
+    <el-card class="box-card" style="">
+      <div class="welcome">
+        Welcome {{ userinfo.username }}
       </div>
   </el-card>
   </div>
 </template>
 
 <script>
+ import { mapGetters } from 'vuex'
+
   export default {
     name: 'Dashboard',
     data() {
       return {
-        username: "王小虎"
       }
+    },
+    computed: {
+      ...mapGetters('user', {
+        userinfo: 'user'
+      })
     }
   }
 </script>
@@ -31,6 +36,16 @@
   }
 
   .box-card {
-    width: 480px;
+    width: 100% !important;
+  }
+
+  .welcome {
+    text-align:center;
+    width:100%;
+    height: 600px;
+    line-height:600px;
+    font-size:50px;
+    color:#409EFF
+  ;
   }
 </style>

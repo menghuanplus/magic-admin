@@ -7,7 +7,7 @@
 
     <div id="header">
       <div class="company">
-        <span>南瓜信联管理后台</span>
+        <span>管理后台</span>
       </div>
       <el-dropdown @command="handleCommand">
         <div class="cont-avatar">

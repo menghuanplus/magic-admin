@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="login"><span>欢迎登录南瓜信联管理后台</span></div>
+    <div class="login"><span>欢迎登录后台</span></div>
     <div id="wx_qrcode"></div>
   </div>
 </template>
